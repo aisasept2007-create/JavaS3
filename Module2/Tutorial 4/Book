@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Book {
+    String title;
+    String author;
+    double price;
+
+    public Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    public void display() {
+        System.out.println("Book Title: " + title);
+        System.out.println("Book Author: " + author);
+        System.out.println("Book Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter details for the Book 1:");
+        System.out.print("Enter Book Title: ");
+        String title = sc.nextLine();
+        
+        System.out.print("Enter Book Author: ");
+        String author = sc.nextLine();
+        
+        System.out.print("Enter Book Price: ");
+        double price = sc.nextDouble();
+        sc.nextLine();
+
+        
+        System.out.println("Enter details for the Book 2:");
+        System.out.print("Enter Book Title: ");
+        String title2 = sc.nextLine();
+        
+        System.out.print("Enter Book Author: ");
+        String author2 = sc.nextLine();
+        
+        System.out.print("Enter Book Price: ");
+        double price2 = sc.nextDouble();
+
+
+        Book b1 = new Book(title, author, price);
+        System.out.println("--- Book Details ---");
+        b1.display();
+        Book b2 = new Book(title2, author2, price2);
+        System.out.println("--- Book Details ---");
+        b2.display();
+        
+        sc.close();
+    }
+}
