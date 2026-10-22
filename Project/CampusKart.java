@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Main {
+public class CampusKart {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new LoginFrame();
