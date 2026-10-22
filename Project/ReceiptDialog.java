@@ -18,15 +18,4 @@ public class ReceiptDialog extends JDialog {
         setLocationRelativeTo(parent);
         setVisible(true);
     }
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(400, 300);
-            frame.setVisible(true);
-
-            String receipt = "Receipt\n\nItem 1: $10.00\nItem 2: $20.00\nTotal: $30.00";
-            new ReceiptDialog(frame, receipt);
-        });
-    }
 }
